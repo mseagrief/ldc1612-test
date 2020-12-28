@@ -170,6 +170,9 @@ class LDC1612: public LDC1612_IIC_OPRTS {
     void set_L(u8 channel, float n_uh);
     void set_C(u8 channel, float n_pf);
     void set_Q_factor(u8 channel, float q);
+
+    float fref(u8 channel);
+
   private:
     s32 parse_result_data(u8 channel, u32 raw_result, u32* result);
     s32 sensor_status_parse(u16 value);

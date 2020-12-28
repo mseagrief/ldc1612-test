@@ -367,6 +367,11 @@ void LDC1612::set_Q_factor(u8 channel, float q) {
     Q_factor[channel] = q;
 }
 
+float LDC1612::fref(u8 channel)
+{
+    return Fref[channel];
+}
+
 
 const char* status_str[] = {"conversion under range error", "conversion over range error",
                             "watch dog timeout error", "Amplitude High Error",
